@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>ToDo App</title>
+  </head>
+  <body>
+    <header>
+      <h1>ToDo App</h1>
+    </header>
+
+    <main>
+      <div id="listContainer">
+        <a href="#" onclick="Modal.toggle('.modalOverlay')">+ Nova Tarefa</a>
+        <ul id="dataTable"></ul>
+      </div>
+    </main>
+
+    <div class="modalOverlay">
+      <div class="modal">
+        <h1>Adicionar Tarefa</h1>
+        <form action="" onsubmit="Form.submit(event)">
+          <div class="input-group">
+            <label for="description"></label>
+            <input
+              type="text"
+              name="description"
+              id="description"
+              placeholder="Ex: Fazer compras"
+            />
+          </div>
+          <div id="buttonDisplay">
+            <a href="#" onclick="Modal.toggle('.modalOverlay')"> Cancelar </a>
+            <button type="submit">Adicionar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <span class="addButton" onclick="Modal.toggle('.modalOverlay')"
+      ><img src="images/addButton.svg" alt="Adicionar Tarefa"
+    /></span>
+
+    <footer>
+      <p>Desenvolvido por Atos Pedro</p>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

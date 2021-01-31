@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+/*header*/
+
+header {
+  height: 8rem;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(90deg, #a8ff78 0%, rgba(255, 255, 255, 0) 100%),
+    #78ffd6;
+  color: white;
+}
+/*Main*/
+main {
+  min-height: 350px;
+  display: flex;
+
+  justify-content: center;
+}
+main a {
+  display: none;
+}
+
+/*List*/
+#listContainer {
+  width: 90%;
+}
+#datalist {
+  display: flex;
+  align-items: start;
+}
+ul {
+  list-style: none;
+}
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+
+  border: none;
+  border-radius: 0.5rem;
+
+  font-size: 14px;
+
+  background-color: #ffff;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+
+  opacity: 0.7;
+  transition: 300ms;
+}
+.listItem:hover {
+  opacity: 1;
+}
+.listItem.complete {
+  background: linear-gradient(90deg, #a8ff78 0%, rgba(255, 255, 255, 0) 100%),
+    #78ffd6;
+  color: #fff;
+}
+.listItem div span {
+  margin-left: 0.5rem;
+  opacity: 0.5;
+  transition: 300ms;
+}
+.listItem div span:hover {
+  opacity: 1;
+}
+/*Add button*/
+
+.addButton {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+}
+
+/*modal*/
+.modalOverlay {
+  display: none;
+}
+.modalOverlay.active {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 70%;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+}
+.modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+.modal input {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: rgb(240, 240, 240);
+  outline: none;
+}
+.modal button {
+  padding: 1rem;
+  width: 48%;
+  color: #a8ff78;
+  font-size: 16px;
+  background-color: #ffffff;
+  border: 1px solid #a8ff78;
+
+  transition: 300ms;
+}
+.modal button:hover {
+  background-color: #a8ff78;
+  color: #ffff;
+}
+
+.modal h1 {
+  margin-bottom: 3rem;
+  font-size: 20px;
+}
+
+#buttonDisplay {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#buttonDisplay a {
+  width: 48%;
+  background-color: #ffff;
+  border: 1px solid red;
+  padding: 1rem;
+
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: red;
+
+  transition: 300ms;
+}
+#buttonDisplay a:hover {
+  background-color: red;
+  color: white;
+}
+.input-group {
+  width: 100%;
+}
+/*Footer*/
+footer {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  main a {
+    display: block;
+    align-self: start;
+    margin: 1rem 0;
+    color: rgb(48, 48, 48);
+    text-decoration: none;
+  }
+  .addButton {
+    display: none;
+  }
+}
