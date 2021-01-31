@@ -106,4 +106,5 @@ const App = {
     this.init();
   },
 };
+
 App.init();

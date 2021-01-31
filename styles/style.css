@@ -185,14 +185,26 @@ footer {
   justify-content: center;
 }
 @media (min-width: 768px) {
+  #listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  #dataTable{
+    width: 80%;
+  }
+  .listItem{
+    width: 100%;
+  }
   main {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: left;
   }
   main a {
-    display: block;
-    align-self: start;
+    display: block;    
     margin: 1rem 0;
     color: rgb(48, 48, 48);
     text-decoration: none;
